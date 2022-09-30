@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /*Function main*/
-
 int main(void)
 {
 	/*Create string with character*/
@@ -11,6 +10,4 @@ int main(void)
 	puts(Programming);
 
 	return (0);
-
-
 }
