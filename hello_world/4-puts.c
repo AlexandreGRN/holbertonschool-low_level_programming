@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*Function main
+ *printing smthing
+ */
+
 int main(void)
 {
 	/*Create string with character*/
