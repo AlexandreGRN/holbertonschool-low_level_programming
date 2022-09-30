@@ -6,13 +6,17 @@
  * Return: Always 0 (Success)
  */
 
-int main(void)
-{
-	/*Create string with character*/
-	char Programming[] = "\"Programming is like building a multilingual puzzle";
+int main() {
+	int intType;
+	float floatType;
+	double doubleType;
+	char charType;
 
-	/*Write Programming*/
-	puts(Programming);
-
-	return (0);
+	sizeof evaluates the size of a variable
+	printf("Size of int: %zu bytes\n", sizeof(intType));
+	printf("Size of float: %zu bytes\n", sizeof(floatType));
+	printf("Size of double: %zu bytes\n", sizeof(doubleType));
+	printf("Size of char: %zu byte\n", sizeof(charType));
+	
+	return 0;
 }
