@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-/*Function main
- *printing smthing
- */
+/*Function main*/
 
 int main(void)
 {
