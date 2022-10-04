@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *  * main- entry point
- *   * Description: write _puthar
- *    * Return: 0
- *    */
+ * main- entry point
+ * Description: write _puthar
+ * Return: 0
+ */
 
 int main(void)
 {
