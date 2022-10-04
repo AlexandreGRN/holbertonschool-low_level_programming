@@ -1,16 +1,22 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <_putchar.c>
+#include "main.h"
 
 /**
- * main - Entry point
- * Description: 'the program's description'
- * Return: Always 0 (Success)
- */
+ *  * main- entry point
+ *   * Description: write _puthar
+ *    * Return: 0
+ *    */
 
 int main(void)
 {
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
 	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
