@@ -1,7 +1,7 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- *print sign of the number
+ *print_sign of the number
  *c character to check
  */
 int print_sign(int n)
