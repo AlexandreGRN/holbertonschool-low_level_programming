@@ -7,6 +7,7 @@
 void print_alphabet_x10(void)
 {
 	char alpha, num;
+
 	for (num = 0 ; num != 10 ; num++)
 	{
 		for (alpha = 'a' ; alpha <= 'z' ; alpha++)
@@ -15,5 +16,4 @@ void print_alphabet_x10(void)
 		}
 	_putchar('\n');
 	}
-	return;
 }
