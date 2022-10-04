@@ -4,7 +4,7 @@
  *print sign of the number
  *c character to check
  */
-int print_sign(int n);
+int print_sign(int n)
 {
   if (n > 0)
   {
