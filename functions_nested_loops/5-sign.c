@@ -1,8 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_sign of the number
- *c character to check
+ *print_sign - print the sign of the number
+ *n character to check
+ *return 1 if n > 0 | return -1 if n < 0 | return 0 if n = 0 | 
  */
 int print_sign(int n)
 {
