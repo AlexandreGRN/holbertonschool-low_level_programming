@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <_putchar.c>
+
 /**
  * main - Entry point
  * Description: 'the program's description'
@@ -8,7 +10,7 @@
 
 int main(void)
 {
-	write(1, "\_putchar\n",10);
+	_putchar('_');
 
 	return (0);
 }
