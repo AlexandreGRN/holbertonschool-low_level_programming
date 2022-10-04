@@ -1,21 +1,19 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
- * main - Entry point
- * Description: 'the program's description'
- * Return: Always 0 (Success)
+ * print_alphabet - Entry point
+ * Description: 'Print alphabet ten times'
  */
-
 void print_alphabet_x10(void);
 {
-	char alpha, num
-	for (num = 0, num !=10, num++)
+	char alpha, num;
+	for (num = 0, num != 10, num++)
 	{
-		for (alpha='a', alpha <= 'z', alpha++)
+		for (alpha = 'a', alpha <= 'z', alpha++)
 		{
-			_putchar('alpha');
+			_putchar(alpha);
 		}
-	_putchat(\n);
+	_putchat('\n');
 	}
-	return (0);
+	return;
 }
