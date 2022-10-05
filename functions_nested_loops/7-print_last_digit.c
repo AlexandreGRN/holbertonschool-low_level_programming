@@ -16,7 +16,7 @@ n = -n;
 u = n % 10;
 if (u == '(')
 {
-_putchar(8);
+_putchar('8');
 return (8);
 }
 else
