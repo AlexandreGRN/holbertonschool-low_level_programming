@@ -23,7 +23,7 @@ else
 {
 printf(", %d", res);
 }
-putchar('\n')
+putchar('\n');
 }
 }
 }
