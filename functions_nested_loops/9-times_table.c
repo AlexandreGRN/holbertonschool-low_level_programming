@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *jack_bauer - print every time tables
+ *times_table - print every time tables
  *
  *Return: void
  */
-void jack_bauer(void)
+void times_table(void)
 {
 int n, m, res;
 
