@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_sign - print the absolute value of the number
+ *_abs - print the absolute value of the number
  *@n: character to check
  *Return: n if n  > 0 | return -n if n < 0
  */
