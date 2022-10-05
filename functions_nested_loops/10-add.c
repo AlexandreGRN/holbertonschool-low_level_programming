@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  *add - add 2 numbers
- * a character 1 
+ * a character 1
  * b character 2 added together
  *Return: int
  */
