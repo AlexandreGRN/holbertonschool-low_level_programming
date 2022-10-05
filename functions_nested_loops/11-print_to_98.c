@@ -11,7 +11,7 @@ if (n > 98)
 {
 for (n = n ; n > 98 ; --n)
 {
-printf("%d ,", n);
+printf("%d, ", n);
 }
 }
 else if (n < 98)
@@ -21,9 +21,5 @@ for (n = n ; n < 98 ; ++n)
 printf("%d, ", n);
 }
 }
-else
-{
-printf("98");
-}
-putchar('\n');
+printf("98\n");
 }
