@@ -13,7 +13,7 @@ for (n = 0; n < 10; n++)
 {
 for (m = 0; m < 10; m++)
 {
-print("0")
+printf("0");
 res = n * m;
 if ((res) < 10)
 {
