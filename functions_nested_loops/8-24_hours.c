@@ -17,22 +17,21 @@ if (hour < 10)
 {
 if (min < 10)
 {
-printf("0%d:0%d", hour, min);
+printf("0%d:0%d\n", hour, min);
 }
 else
 {
-printf("0%d:%d", hour, min);
+printf("0%d:%d\n", hour, min);
 }
 }
 else if (min < 10)
 {
-printf("%d:0%d", hour, min);
+printf("%d:0%d\n", hour, min);
 }
 else
 {
-printf("%d:%d", hour, min);
+printf("%d:%d\n", hour, min);
 }
 }
-_putchar('\n');
 }
 }
