@@ -12,7 +12,7 @@ int n, m, res;
 for (n = 0; n < 10; n++)
 {
 printf("0");
-for (m = 0; m < 10; m++)
+for (m = 1; m < 10; m++)
 {
 res = n * m;
 if ((res) < 10)
