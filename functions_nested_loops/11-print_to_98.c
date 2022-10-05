@@ -23,5 +23,4 @@ for (n ; n < 98 ; ++n)
 printf(", %d", n);
 }
 }
-return (0);
 }
