@@ -11,5 +11,5 @@ int r;
 
 r = (n % 10 + '0');
 _putchar(r);
-return (r + '0');
+return (r);
 }

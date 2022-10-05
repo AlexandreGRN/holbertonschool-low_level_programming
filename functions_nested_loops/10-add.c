@@ -7,11 +7,5 @@
  */
 int add(int a, int b)
 {
-    int res;
-
-	for (alpha = 'a' ; alpha <= 'z' ; alpha++)
-	{
-		_putchar(alpha);
-	}
-	_putchar('\n');
+    return (a + b);
 }
