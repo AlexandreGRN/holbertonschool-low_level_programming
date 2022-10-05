@@ -7,7 +7,7 @@
  */
 int add(int a, int b)
 {
-    int alpha;
+    int res;
 
 	for (alpha = 'a' ; alpha <= 'z' ; alpha++)
 	{
