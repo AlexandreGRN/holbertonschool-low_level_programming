@@ -7,21 +7,14 @@
  */
 int print_last_digit(int n)
 {
-int u;
+  int u;
 
-if (n < 0)
-{
-n = -n;
-}
-u = n % 10;
-if (u == '(')
-{
-_putchar('8');
-return (8);
-}
-else
-{
-_putchar(u + '0');
-return (u);
-}
+  u = n % 10;
+  if (u < 0)
+  {
+    u = -u;
+  }
+
+  _putchar(u + '0');
+  return (u);
 }
