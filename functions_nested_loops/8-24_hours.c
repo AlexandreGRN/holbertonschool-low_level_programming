@@ -24,7 +24,9 @@ else
 printf("0%d:%d", hour, min);
 }
 else if (min < 10)
+{
 printf("%d:0%d", hour, min);
+}
 else
 {
 printf("%d:%d", hour, min);
