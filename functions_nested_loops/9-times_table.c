@@ -11,9 +11,9 @@ int n, m, res;
 
 for (n = 0; n < 10; n++)
 {
+printf("0");
 for (m = 0; m < 10; m++)
 {
-printf("0");
 res = n * m;
 if ((res) < 10)
 {
@@ -23,7 +23,7 @@ else
 {
 printf(", %d", res);
 }
-putchar('\n');
 }
+putchar('\n');
 }
 }
