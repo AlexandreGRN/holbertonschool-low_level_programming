@@ -9,33 +9,29 @@ int main(void)
 {
 	int n;
 
-	for (n = 0 ; n < 100 ; n++)
+	for (n = 1 ; n < 100 ; n++)
 	{
 		/*if multiples of 3 and 5 FizzBuzz*/
 		if ((n % 3) == 0 && (n % 5) == 0)
 		{
-			printf("FizzBuzz");
-			_putchar(' ');
+			printf("FizzBuzz ");
 		}
 		/*else, if only multiples of 3 Fizz*/
 		else if ((n % 3) == 0)
 		{
-			printf("Fizz");
-			_putchar(' ');
+			printf("Fizz ");
 		}
 		/*else, if only multiples of 5 Buzz */
 		else if ((n % 5) == 0)
 		{
-			printf("Buzz");
-			_putchar(' ');
+			printf("Buzz ");
 		}
 		/*if neither, print n*/
 		else
 		{
-			printf("%d", n);
-			_putchar(' ');
+			printf("%d ", n);
 		}
 	}
-	printf("Buzz");
+	printf("Buzz\n");
 	return (0);
 }
