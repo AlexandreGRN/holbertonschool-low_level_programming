@@ -7,10 +7,11 @@
 void more_numbers(void)
 {
 	int m, n;
-
+	/*each lines*/
 	for (m = 0 ; m < 10 ; m++)
 	{
-		for (n = 0 ; n < 15 ; m++)
+		/*print every number 0 > 14*/
+		for (n = 0 ; n < 15 ; n++)
 		{
 			if (n > 9)
 			{
