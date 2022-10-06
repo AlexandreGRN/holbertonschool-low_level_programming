@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * print_line - print a straight line
+ * print_diagonal - print a diagonal line
  * @n : number of line
  * Return: result
  */
 void print_diagonal(int n)
 {
 	int a, b;
+
 	if (n > 0)
 	{
 		/*boucle n lignes*/
@@ -15,7 +16,7 @@ void print_diagonal(int n)
 		{
 			/*mets 1 espace par nombre de ligne*/
 			b = a;
-			while(b > 0)
+			while (b > 0)
 			{
 				_putchar(' ');
 				b--;
