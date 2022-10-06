@@ -1,28 +1,23 @@
 #include "main.h"
 
 /**
- * more_numbers - print all 10 digits
- * Return: result
+ * more_numbers - print numbers 0 > 14
  */
+
 void more_numbers(void)
 {
-	int n = 48;
-	int m;
-	int dizaine = 0;
+	int m, n;
 
-	for (m = 0 ; m <= 14 ; m++)
+	for (m = 0 ; m < 10 ; m++)
 	{
-		if (dizaine = 1)
+		for (m = 0 ; n < 15 ; m++)
 		{
-			_putchar(49);
+			if (n > 9)
+			{
+				_putchar((n / 10) + '0');
+			}
+			_putchar((n % 10) + '0');
 		}
-		_putchar(n);
-		if (n >= 57)
-		{
-			n = 48;
-			dizaine = 1;
-		}
-		
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
