@@ -14,4 +14,4 @@ oclean :
 
 fclean : oclean clean
 
-re : $(CC) $(OBJ) -o $(NAME)
+re : oclean all
