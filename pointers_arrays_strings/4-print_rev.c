@@ -10,6 +10,7 @@ void print_rev(char *s)
 {
 	int n = 0;
 
+	putchar('\0');
 	while (*s != '\0') /*n = string lenght*/
 	{
 		n++;
