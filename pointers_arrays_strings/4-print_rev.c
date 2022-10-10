@@ -8,20 +8,18 @@
 
 void print_rev(char *s)
 {
-	int n = 0;
+	int x;
 
-	_putchar('\0');
-	while (*s != '\0') /*n = string lenght*/
+	x = 0;
+
+	while (s[x] != '\0')
 	{
-		n++;
-		s++;
+		x++;
 	}
-	n++;
-	while (n != 0) /*print string reverse, stop when string lenght reach*/
+	while (x != 0)
 	{
-		_putchar(*s);
-		s--;
-		n--;
+		x--;
+		_putchar(s[x]);
 	}
 	_putchar('\n');
 }
