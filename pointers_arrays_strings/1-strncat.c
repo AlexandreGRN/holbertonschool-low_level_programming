@@ -7,6 +7,8 @@
  *
  * @src: second string
  *
+ * @n: max byte
+ *
  * Return: dest address
  */
 
