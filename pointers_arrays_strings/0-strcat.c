@@ -2,10 +2,12 @@
 
 /**
  * _strcat - concatenate 2 strings
- * 
+ *i
  * @dest: first string
  *
  * @src: second string
+ *
+ * Return: dest address
  */
 
 char *_strcat(char *dest, char *src)
@@ -19,11 +21,11 @@ char *_strcat(char *dest, char *src)
 
 	for (m = 0 ; *src != '\0' ; m++)
 	{
-		*dest=*src;
+		*dest = *src;
 		src++;
 		dest++;
 	}
-	*dest='\0';
+	*dest = '\0';
 	o = m + n;
 	while (o != 0)
 	{
