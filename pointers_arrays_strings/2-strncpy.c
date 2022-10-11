@@ -10,6 +10,7 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
+	int p = n;
 	while(n != 0)
 	{
 		for (; *src != '\0' ; src++)
@@ -18,6 +19,11 @@ char *_strncpy(char *dest, char *src, int n)
 			dest++;
 		}
 		n--;
+	}
+	while (n != p)
+	{
+		dest--;
+		n++;
 	}
 	return (dest);
 }
