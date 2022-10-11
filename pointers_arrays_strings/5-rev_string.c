@@ -3,6 +3,7 @@
 /**
  * rev_string - Script that reverse a string
  * @s: strinh
+ *
  */
 
 void rev_string(char *s)
@@ -19,7 +20,7 @@ void rev_string(char *s)
 	for (m = 0; m < n; m++)
 	{
 		vel = s[m];
-		s[m] = s[n]
+		s[m] = s[n];
 		s[n] = vel;
 		n--;
 	}
