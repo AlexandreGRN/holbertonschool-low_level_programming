@@ -18,7 +18,7 @@ void print_diagsums(int *a, int size)
 		m = m + size + 1;
 	}
 
-	while (n >= 0)
+	while (n > 0)
 	{
 		res2 = res2 + a[n];
 		n = n - size + 1;
