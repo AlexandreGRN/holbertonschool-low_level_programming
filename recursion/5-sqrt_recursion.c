@@ -4,6 +4,7 @@
  * is_square - find the square if a valid number
  * @n: number
  * @a: same number
+ * @b: counter
  * Return: the square of n
  */
 int is_square(int n, int a, int b)
