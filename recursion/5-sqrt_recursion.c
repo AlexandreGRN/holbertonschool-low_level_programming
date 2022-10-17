@@ -6,18 +6,18 @@
  * @a: same number
  * Return: the square of n
  */
-int is_square(int n, int a)
+int is_square(int n, int a, int b)
 {
-	if (a == 0)
+	if (b == a)
 	{
 		return (-1);
 	}
 	else
 	{
-		if ((a * a) == n)
-			return (a);
+		if ((b * b) == n)
+			return (b);
 		else
-			return (is_square(n, a - 1));
+			return (is_square(n, a, (b + 1)));
 	}
 }
 
@@ -32,5 +32,5 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 	else
-		return (is_square(n, n));
+		return (is_square(n, n, 0));
 }
