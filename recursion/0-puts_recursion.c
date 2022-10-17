@@ -9,6 +9,7 @@ void _puts_recursion(char *s)
 	recursion(s);
 	_putchar('\n');
 }
+
 /**
  * recursion - print a string
  * @s: string to print
@@ -19,6 +20,6 @@ void recursion(char *s)
 	{
 		_putchar(*s);
 		s++;
-		_puts_recursion(s);
+		recursion(s);
 	}
 }
