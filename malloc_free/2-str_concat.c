@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	else
 		size2 = strlen(s2);
 
-	a = malloc(size1 + size2); /*allocation of the sum of the two size */
+	a = malloc(size1 + size2 + 1); /*allocation of the sum of the two size */
 	if (a == 0)
 		return (0);
 
