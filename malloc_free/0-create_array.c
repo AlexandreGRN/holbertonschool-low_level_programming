@@ -22,5 +22,6 @@ char *create_array(unsigned int size, char c)
 	for (i = 0 ; i != size ; i++)
 	a[i] = c; /*initialize with c*/
 
+	free(a);
 	return (a);
 }
