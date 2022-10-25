@@ -9,14 +9,27 @@
 
 int **alloc_grid(int width, int height)
 {
+	int i, j;
 	int **dim;
 
-	if (width <= 0 || height <= 0) /*test if valid width and height*/
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	dim = malloc(sizeof(int) * width * height); /*2d array creation + test*/
+	dim = malloc(width * height * sizeof(int));
 	if (dim == 0)
 		return (0);
+
+	for (i = 0 ; i != width ; i++)
+	{
+		dim[i] = malloc(width * sizeof(int));
+		if (dim == 0)
+			return (0);
+
+		for (j = 0 ; j != width ; j++)
+		{
+			dim[i][j] = 0;
+		}
+	}
 
 	return (dim);
 }
