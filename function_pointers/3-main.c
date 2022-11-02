@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error");
 		exit(98);
 	}
-	if ((argc[2] == '/' || argc[2] == '%') && argc[3] == '0')
+	if ((*argc[2] == '/' || *argc[2] == '%') && *argc[3] == '0')
 	{
 		printf("Error");
 		exit(100);
