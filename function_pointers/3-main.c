@@ -4,7 +4,7 @@
 /**
  * main - take args and pass it as int
  * @argc: arg count
- * @argv: arg vector
+ * @argv: arg vector 1
  * Return: 0
  */
 
