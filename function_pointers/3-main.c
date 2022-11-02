@@ -23,6 +23,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
+	
+	if (strlen(argv[2]) != 1)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	argc = argc;
 
 	a = atoi(argv[1]);
