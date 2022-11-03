@@ -18,12 +18,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0 ; i < n ; ++i)
 	{
 		string = va_arg(sptr, char *);
-		for (j = 0 ; string[j] != '\0' ; j++)
+		if (string == NULL)
 		{
-			printf("%c", string[j]);
+			printf("(nil)");
+		}
+		else
+		{
+			for (j = 0 ; string[j] != '\0' ; j++)
+			{
+				printf("%c", string[j]);
+			}
 		}
 		if (i < n - 1)
-			printf("%c ", *separator);
+			printf("%c", *separator);
 	}
 	printf("\n");
 }
