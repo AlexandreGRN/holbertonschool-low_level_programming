@@ -19,9 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", a);
 		if (i < (n - 1))
 		{
-			if (*separator == 0)
-				putchar(32);
-			else if (*separator)
+			if (*separator && *separator == 0)
 				printf("%c ", *separator);
 		}
 	}
