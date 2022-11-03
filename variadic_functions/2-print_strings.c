@@ -30,7 +30,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 		}
 		if (i < n - 1)
-			printf("%c ", *separator);
+			if (separator && *separator != 32)
+				printf("%c ", *separator);
+			else if (*separator == 32)
+				printf(" ");
 	}
 	printf("\n");
 }
