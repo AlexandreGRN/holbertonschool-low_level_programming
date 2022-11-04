@@ -16,7 +16,7 @@ void fi(va_list ptr)
  */
 void fc(va_list ptr)
 {
-	printf("%d", va_arg(ptr, int));
+	printf("%c", va_arg(ptr, int));
 }
 
 /**
