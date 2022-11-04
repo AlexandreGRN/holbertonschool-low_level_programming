@@ -7,7 +7,7 @@
 
 typedef struct typeee
 {
-	char ctype;
+	char *ctype;
 	void (*f)(va_list ptr);
 }type_t;
 

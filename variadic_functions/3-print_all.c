@@ -49,11 +49,11 @@ void print_all(const char * const format, ...)
 	va_list(sptr);
 
 	type_t listPrint[] = {
-		{'c', fc},
-		{'i', fi},
-		{'f', ff},
-		{'s', fs},
-		{0, NULL},
+		{"c", fc},
+		{"i", fi},
+		{"f", ff},
+		{"s", fs},
+		{NULL, NULL},
 	};
 
 	va_start(sptr, format);
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 
 		while (j < 5)
 		{
-			if (format[i] == listPrint[j].ctype)
+			if (format[i] == *listPrint[j].ctype)
 			{
 				listPrint[j].f(sptr);
 				test = 1;
