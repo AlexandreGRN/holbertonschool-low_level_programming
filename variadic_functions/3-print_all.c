@@ -34,7 +34,10 @@ void ff(va_list ptr)
  */
 void fs(va_list ptr)
 {
-	printf("%s", va_arg(ptr, char *));
+	char *string = va_arg(ptr, char *);
+
+	if (string == NULL)
+		printf("(nil)");
 }
 
 /**
@@ -58,13 +61,13 @@ void print_all(const char * const format, ...)
 
 	va_start(sptr, format);
 
-	while (format[i] != 0)
+	while (format != NULL && format[i] != 0)
 	{
 		test = 0;
 		j = 0;
 
 
-		while (j < 5)
+		while (j < 4)
 		{
 			if (format[i] == *listPrint[j].ctype)
 			{
