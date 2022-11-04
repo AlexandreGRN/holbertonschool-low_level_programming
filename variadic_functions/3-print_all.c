@@ -21,11 +21,14 @@ void fi(int a, ...)
  */
 void fc(int a, ...)
 {
+	int b;
+
 	va_list(cptr);
 
 	va_start(cptr, a);
 	a = a;
-	printf("%c", va_arg(cptr, int));
+	b = va_arg(cptr, int);
+	printf("%d", b)
 	va_end(cptr);
 }
 
@@ -35,11 +38,14 @@ void fc(int a, ...)
  */
 void ff(int a, ...)
 {
+	double b;
+
 	va_list(fptr);
 
 	va_start(fptr, a);
 	a = a;
-	printf("%f", va_arg(fptr, double));
+	b = va_arg(fptr, double);
+	printf("%f", b);
 	va_end(fptr);
 }
 
@@ -82,7 +88,7 @@ void print_all(const char * const format, ...)
 	{
 		test = 0;
 		j = 0;
-		while (j < 5)
+		while (j < 4)
 		{
 			if (format[i] == listPrint[j].ctype)
 			{
