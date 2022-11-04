@@ -61,6 +61,8 @@ void print_all(const char * const format, ...)
 	{
 		test = 0;
 		j = 0;
+
+		printf('\0');
 		while (j < 5)
 		{
 			if (format[i] == listPrint[j].ctype)
