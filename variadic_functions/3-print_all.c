@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 		{'i', fi},
 		{'f', ff},
 		{'s', fs},
-		{'\0', NULL},
+		{NULL, NULL},
 	};
 
 	va_start(sptr, format);
