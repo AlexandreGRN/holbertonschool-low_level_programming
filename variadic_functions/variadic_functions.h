@@ -8,13 +8,13 @@
 typedef struct typeee
 {
 	char ctype;
-	void (*f)(int a, ...);
+	void (*f)(va_list ptr);
 }type_t;
 
-void fc(int a, ...);
-void fi(int a, ...);
-void ff(int a, ...);
-void fs(int a, ...);
+void fc(va_list ptr);
+void fi(va_list ptr);
+void ff(va_list ptr);
+void fs(va_list ptr);
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

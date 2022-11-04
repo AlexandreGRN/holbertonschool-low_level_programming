@@ -2,65 +2,39 @@
 
 /**
  * fi - print i
- * @a: a
+ * @ptr: a
  */
 
-void fi(int a, ...)
+void fi(va_list ptr)
 {
-	va_list(iptr);
-
-	va_start(iptr, a);
-	a = a;
-	printf("%d", va_arg(iptr, int));
-	va_end(iptr);
+	printf("%d", va_arg(ptr, int));
 }
 
 /**
  * fc - print i
- * @a: a
+ * @ptr: a
  */
-void fc(int a, ...)
+void fc(va_list ptr)
 {
-	int b;
-
-	va_list(cptr);
-
-	va_start(cptr, a);
-	a = a;
-	b = va_arg(cptr, int);
-	printf("%d", b)
-	va_end(cptr);
+	printf("%d", va_arg(ptr, int));
 }
 
 /**
  * ff - print i
- * @a: a
+ * @ptr: a
  */
-void ff(int a, ...)
+void ff(va_list ptr)
 {
-	double b;
-
-	va_list(fptr);
-
-	va_start(fptr, a);
-	a = a;
-	b = va_arg(fptr, double);
-	printf("%f", b);
-	va_end(fptr);
+	printf("%f", va_arg(ptr, double));
 }
 
 /**
  * fs - print i
- * @a: a
+ * @ptr: a
  */
-void fs(int a, ...)
+void fs(va_list ptr)
 {
-	va_list(sptr);
-
-	va_start(sptr, a);
-	a = a;
-	printf("%s", va_arg(sptr, char *));
-	va_end(sptr);
+	printf("%s", va_arg(ptr, char *));
 }
 
 /**
@@ -79,7 +53,6 @@ void print_all(const char * const format, ...)
 		{'i', fi},
 		{'f', ff},
 		{'s', fs},
-		{'\0', NULL}
 	};
 
 	va_start(sptr, format);
@@ -92,7 +65,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == listPrint[j].ctype)
 			{
-				listPrint[j].f(0, va_arg(sptr, char *));
+				listPrint[j].f(sptr);
 				test = 1;
 				break;
 			}
