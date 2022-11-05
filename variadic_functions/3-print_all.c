@@ -48,7 +48,7 @@ void fs(va_list ptr)
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0, test;
-	char *sep = "";
+	char *sep = " ";
 
 	va_list(sptr);
 
