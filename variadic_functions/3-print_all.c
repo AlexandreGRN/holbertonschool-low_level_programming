@@ -47,7 +47,7 @@ void fs(va_list ptr)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0, test;
+	int i = 0, j = 0;
 	char *sep = " ";
 
 	va_list(sptr);
@@ -72,16 +72,14 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *listPrint[j].ctype)
 			{
+				printf("%s", sep);
 				listPrint[j].f(sptr);
-				test = 1;
+				sep = ", ";
 				break;
 			}
 			j++;
 		}
 		i++;
-		printf("%s", sep);
-		tall[i].f(to_pr);
-		sep = ", ";
 	}
 	va_end(sptr);
 	printf("\n");
