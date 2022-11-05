@@ -38,6 +38,8 @@ void fs(va_list ptr)
 
 	if (string == NULL)
 		printf("(nil)");
+	
+	printf("%s", string);
 }
 
 /**
@@ -48,7 +50,7 @@ void fs(va_list ptr)
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
-	char *sep = " ";
+	char *sep = "";
 
 	va_list(sptr);
 
