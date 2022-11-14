@@ -10,8 +10,8 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newHead;
-	list_t *copyHead;
-	list_t **copycopyHead = &copyHead;
+	list_t *copyHead; /*creating a temp adress as the value of the cpy of head */
+	list_t **copycopyHead = &copyHead; /*creating a ptr to ptr to copy head*/
 
 	/* creating newHead struct as a new node*/
 	newHead = malloc(sizeof(list_t));
@@ -32,7 +32,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*test if first value of head*/
 	if (*head == NULL)
 	{
-		(*head) = newHead;
+		(*head) = newHead; /* HEAD <- newHead*/
 		return (newHead);
 	}
 	(*copycopyHead) = (*head);
