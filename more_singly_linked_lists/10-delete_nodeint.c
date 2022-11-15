@@ -21,19 +21,26 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		while (count < index) /*travel every node before index - 1*/
 		{
-			if ((*head) == NULL)
+			if ((*head) == NULL) /*if more index > the number of values*/
+			{
+				(*head) = copyHead;
 				return (-1);
+			}
 			count++;
 			(*head) = (*head)->next;
 		}
-		copyNext = &((*head)->next); /*link the adress of (*head).next*/
-		(*head) = (*head)->next;
-		*copyNext = ((*head)->next); /*change the value of (*head)->next) */
-		free((*head));
-		*head = copyHead;
-		return (1);
+		if ((*head)) /* if we are on the indexth - 1 value*/
+		{
+			copyNext = &((*head)->next); /*link the adress of (*head).next*/
+			(*head) = (*head)->next;
+			*copyNext = ((*head)->next); /*change the value of (*head)->next) */
+			free((*head));
+			*head = copyHead;
+			return (1);
+		}
+		return (-1);
 	}
-	else
+	else /*if we want to suppress the first value*/
 	{
 		copyHead = (*head)->next;/*store (*head)->next to make next as new head*/
 		free(*head);
