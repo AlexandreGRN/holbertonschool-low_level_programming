@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *copyNode; /*var to copy the link to the next node */
 
-	if ((*head))
+	if (head)
 	{
 		while ((*head))
 		{
