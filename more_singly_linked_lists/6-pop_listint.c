@@ -11,6 +11,8 @@ int pop_listint(listint_t **head)
 	listint_t *copyFirstNode;
 	int n = 0;
 
+	if ((*head) == NULL)
+		return (0);
 	n = (*head)->n;
 
 	copyFirstNode = (*head)->next;
