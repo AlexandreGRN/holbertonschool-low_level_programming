@@ -11,7 +11,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int count = 0;
 	listint_t *copyHead; /*copy the head node*/
-	listint_t *returnNode; /*value to return the value of the nth node*/
+	listint_t *returNode; /*value to return the value of the nth node*/
 
 	copyHead = head;
 	while (index > count && head)
@@ -24,7 +24,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		head = copyHead;
 		return (NULL);
 	}
-	returnNode = head;
+	returNode = head;
 	head = copyHead;
-	return (returnNode);
+	return (returNode);
 }
