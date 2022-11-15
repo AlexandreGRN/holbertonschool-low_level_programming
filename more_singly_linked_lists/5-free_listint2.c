@@ -9,13 +9,14 @@ void free_listint2(listint_t **head)
 {
 	listint_t *copyNode; /*var to copy the link to the next node */
 
-	while ((*head))
+	if ((*head))
 	{
-		if ((*head)->next)
+		while ((*head))
+		{
 			copyNode = (*head)->next;
-		free(*head);
-		(*head) = NULL;
-		if ((*head))
+			free(*head);
+			(*head) = NULL;
 			(*head) = copyNode;
+		}
 	}
 }
