@@ -1,0 +1,4 @@
+[master 60a1250] adding return value of head if index of nodes in list
+ 4 files changed, 89 insertions(+), 76 deletions(-)
+ rewrite more_singly_linked_lists/main.c (94%)
+ create mode 100644 more_singly_linked_lists/number
