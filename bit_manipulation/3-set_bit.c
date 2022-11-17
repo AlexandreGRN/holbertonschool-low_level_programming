@@ -20,5 +20,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 		valueSetter = valueSetter << 1;
 	}
 	*n = *n | valueSetter;
-	return (0);
+	return (1);
 }
