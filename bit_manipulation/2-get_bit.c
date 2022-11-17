@@ -10,7 +10,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int count = 0;
 
-	if (index > 19) /*if index not corresponding to any node*/
+	if (index > 19999) /*if index not corresponding to any node*/
 		return (-1);
 	while (count < index)
 	{
