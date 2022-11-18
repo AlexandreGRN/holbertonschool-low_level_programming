@@ -14,9 +14,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	tester = ~(n ^ m);
 	if (n == 0) /*particuliar case for int = 0*/
-		tester = n;
-	if (m = 0)
 		tester = m;
+	if (m == 0)
+		tester = n;
 
 	while (tester >= 1)
 	{
