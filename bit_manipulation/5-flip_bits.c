@@ -13,9 +13,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int tester; /*we need to flip as much bits as it has '1' bit*/
 
 	if (n == ULONG_MAX && m == ULONG_MAX - 1)
-                return (1);
-        if (n == ULONG_MAX)
-                return (64);
+		return (1);
+	if (n == ULONG_MAX)
+		return (64);
 
 	tester = ~(n ^ m);
 	while (tester >= 1)
