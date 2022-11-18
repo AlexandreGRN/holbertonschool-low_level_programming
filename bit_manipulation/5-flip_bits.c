@@ -12,12 +12,12 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int numberFlip = 0; /*number to flip*/
 	unsigned int tester; /*we need to flip as much bits as it has '1' bit*/
 
-	if (n == ULONG_MAX && m == ULONG_MAX - 1)
-		return (1);
-	if (n == ULONG_MAX)
-		return (64);
-
 	tester = ~(n ^ m);
+	if (n == 0) /*particuliar case for int = 0*/
+		tester = n;
+	if (m = 0)
+		tester = m;
+
 	while (tester >= 1)
 	{
 		if ((tester & 1) == 0)/*if last bit of tester is 1, number to flip is ++*/
