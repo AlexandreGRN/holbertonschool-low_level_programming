@@ -1,47 +1,55 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - insert a new node at a given pos
- * @h: head of the list
- * @idx: index where to put the node
- * @n: int to add in the node
- * Return: adress of the new node or NULL if fail
+ * delete_dnodeint_at_index - delete a node at a given pos
+ * @head: head of the list
+ * @index: index where to put the node
+ * Return: 1 or -1 for error
  */
 
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int counter = 0;
+	dlistint_t *copyHead, *temp, *toFree;
+	unsigned int count = 0;
 
-	dlistint_t *storeHead = *h;
-	dlistint_t **storeSuppr;
-	dlistint_t **ptrNext;
+	copyHead = (*head); /*stock head*/
 
-	if (idx == 0)
+	if (copyHead == NULL)
+		return (-1);
+
+	if (index == 0) /*delete beginning*/
 	{
-		return (add_dnodeint(h, n));
-	}
-
-	while (counter + 1 < idx)
-	{
-		if (*h)
+		if ((*head)->next != NULL)
 		{
-			ptrNext = &((*h)->next)
-			counter++;
-			*h = (*h)->next; /*go to the index of the node to suppr*/
+			(*head) = (*head)->next;
+			(*head)->prev = NULL;
+			free(copyHead);
+			return (1);
 		}
 		else
 		{
-			*h = storeHead;
-			return (NULL);
+			free(*head);
+			*head = NULL;
+			return (1);
 		}
 	}
-	storeSuppr = h;
-	free(ptrNext);
-	if (h->next)
+
+	while (head && count < index)
 	{
-		*h = (*h)->next;
+		temp = copyHead;
+		if (copyHead->next != NULL)
+		{
+			count++;
+			copyHead = copyHead->next;
+		}
+		else
+			return (-1);
+	}
 
-	
-
-	return (newNode);
+	temp->next = copyHead->next;
+	toFree = copyHead;
+	copyHead = copyHead->next;
+	copyHead->prev = temp;
+	free(toFree);
+	return (1);
 }
