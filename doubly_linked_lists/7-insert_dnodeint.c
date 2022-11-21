@@ -33,7 +33,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			*h = (*h)->next; /*go to the index*/
 		}
 		else
+		{
+			*h = storeHead;
 			return (NULL);
+		}
 	}
 	/*links*/
 	newNode->prev = (*h);
