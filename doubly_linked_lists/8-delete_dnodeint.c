@@ -1,6 +1,26 @@
 #include "lists.h"
 
 /**
+ * _print_dlistint_backward - print a list but backward
+ * @h: head of the list
+ * Return: number of elems
+ */
+size_t _print_dlistint_backward(const dlistint_t *h)
+{
+	int count = 0;
+
+	while (h->next) /*go end*/
+		h = h->next;
+	while (h->prev) /*print backward + count for lenght*/
+	{
+		count++;
+		printf("%d", h->n); /*print current*/
+		h = h->prev; /*go previous node*/
+	}
+	printf("%d", h->n);
+	return (count);
+}
+/**
  * delete_dnodeint_at_index - delete a node at a given pos
  * @head: head of the list
  * @index: index where to put the node
@@ -8,15 +28,12 @@
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
-{
-	dlistint_t *copyHead, *temp, *toFree;
+{dlistint_t *copyHead, *temp, *toFree;
 	unsigned int count = 0;
 
 	copyHead = (*head); /*stock head*/
-
 	if (copyHead == NULL)
 		return (-1);
-
 	if (index == 0) /*delete beginning*/
 	{
 		if ((*head)->next != NULL)
@@ -33,7 +50,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (1);
 		}
 	}
-
 	while (head && count < index)
 	{
 		temp = copyHead;
@@ -45,11 +61,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		else
 			return (-1);
 	}
-
 	temp->next = copyHead->next;
 	toFree = copyHead;
+	if (copyHead->next)
 	copyHead = copyHead->next;
-	copyHead->prev = temp;
+	if (copyHead->prev != NULL)
+		copyHead->prev = temp;
 	free(toFree);
 	return (1);
 }
