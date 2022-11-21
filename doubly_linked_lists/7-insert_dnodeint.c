@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+ * _print_dlistint_backward - print a list but backward
+ * @h: head of the list
+ * Return: number of elems
+ */
+size_t _print_dlistint_backward(const dlistint_t *h)
+{
+	int count = 0;
+
+	while (h->next) /*go end*/
+		h = h->next;
+	while (h->prev) /*print backward + count for lenght*/
+	{
+		count++;
+		printf("%d", h->n); /*print current*/
+		h = h->prev; /*go previous node*/
+	}
+	printf("%d", h->n);
+	return (count);
+}
+
+/**
  * insert_dnodeint_at_index - insert a new node at a given pos
  * @h: head of the list
  * @idx: index where to put the node
@@ -35,6 +56,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		else
 		{
 			*h = storeHead;
+			free(newNode);
 			return (NULL);
 		}
 	}
