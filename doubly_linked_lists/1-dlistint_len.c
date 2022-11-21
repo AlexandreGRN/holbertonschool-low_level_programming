@@ -1,18 +1,18 @@
 #include "lists.h"
 
 /**
- * print_dlistint - print a doubly linked list
+ * dlistint_len - print the len of a doubly linked list
  * @h: head of the list
  * Return: lenght of the list
  */
 
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int len = 0;
 
 	if (h == NULL)
 		return (0);
-	while (h != NULL) /*print all the list + lenght of the list*/
+	while (h != NULL) /*get lenght of the list*/
 	{
 		len++;
 		if (h->next != NULL)
