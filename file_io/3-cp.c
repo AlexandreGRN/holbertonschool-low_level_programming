@@ -31,17 +31,17 @@ int main(int argc, char *argv[])
 		write(fd2, buffer, size);
 	}
 	test1 = close(fd1);
-	if (test1 == 1)
+	if (test1 == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", test1);
 		return (100);
 	test2 = close(fd2);
 	}
-	if (test2 == 1)
+	if (test2 == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d", test2);
 		return (100);
 	}
 	size = size;
-	return (1);
+	return (0);
 	}
