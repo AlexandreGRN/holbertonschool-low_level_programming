@@ -30,13 +30,13 @@ int main(int argc, char *argv[])
 	{
 		if (size == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			return (98);
 		}
 		test3 = write(fd2, buffer, size);
 		if (test3 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 			return (99);
 		}
 	}
