@@ -25,6 +25,11 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	if (fd2 == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
+		return (98);
+	}
 	/*read file 1 + write file2*/
 	while ((size = read(fd1, buffer, 1024)))
 	{
@@ -36,7 +41,7 @@ int main(int argc, char *argv[])
 		test3 = write(fd2, buffer, size);
 		if (test3 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			return (99);
 		}
 	}
