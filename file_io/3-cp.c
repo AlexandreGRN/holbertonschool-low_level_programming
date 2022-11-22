@@ -12,9 +12,14 @@ int main(int argc, char *argv[])
 	char *buffer[1024];
 	int fd1, fd2, test1 = 0, test2 = 0, test3 = 0, size = 0;
 
+	if (argc == 2)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to ");
+		return (99);
+	}
 	if (argc != 3)
 	{
-		dprintf(4, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	/*open both files*/
