@@ -84,9 +84,8 @@ int main(void)
 		else
 			printf("(nil)\n");
 	}
+	printf("ici");
 	n = print_dlistint(head);
-	printf("-> %lu elements\n", n);
-	n = _print_dlistint_backward(head);
 	printf("-> %lu elements\n", n);
 	_free_dlistint(head);
 	return (0);
