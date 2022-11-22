@@ -18,16 +18,16 @@ int main(int argc, char *argv[])
 	if (fd1 == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98); }
-	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fd2 = open(argv[2], O_TRUNC | O_CREAT, 0664);
 	if (fd2 == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		return (98); }
+		return (99); }
 	/*read file 1 + write file2*/
 	while ((size = read(fd1, buffer, 1024)))
 	{
 		if (size == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			return (9); }
+			return (98); }
 		test3 = write(fd2, buffer, size);
 		if (test3 == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
