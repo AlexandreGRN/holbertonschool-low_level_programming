@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	fd2 = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	/*read file 1 + write file2*/
-	while (size = read(fd1, buffer, 1024))
+	while ((size = read(fd1, buffer, 1024)))
 	{
 		write(fd2, buffer, size);
 	}
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		return (100);
 	test2 = close(fd2);
 	}
-	if (test1 == 1)
+	if (test2 == 1)
 	{
 		dprintf(2, "Error: Can't close fd %d", test2);
 		return (100);
