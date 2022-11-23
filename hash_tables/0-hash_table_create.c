@@ -8,17 +8,17 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *newHash = NULL;
+	hash_table_t *newHash;
 
 	/* create new hash_table struc*/
-	newHash = realloc(newHash, sizeof(hash_table_t));
+	newHash = malloc(sizeof(hash_table_t));
 	if (!newHash)
 		return (NULL);
 	newHash->size = size;
 	newHash->array = malloc(sizeof(hash_node_t));
 	if (!newHash->array)
 	{
-		free (newHash);
+		free(newHash);
 		return (NULL);
 	}
 	return (newHash);
