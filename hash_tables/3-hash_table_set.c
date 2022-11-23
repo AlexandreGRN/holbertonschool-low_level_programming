@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *tempHead; /* used to search an available place in the hashtable and head of the linked list */
 
 	/* get the index from prev function*/
-	index = key_index((const unsigned char *)key, 1024);
+	index = key_index((const unsigned char *)key, ht->size);
 
 	/* go to index in the hashtable*/
 	tempHead = ht->array[index];
@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			/* replacing the old value in the good spot (corresponding key) */
 			free(tempHead->value);
-			strcpy(tempHead->value, value);
+			tempHead->value = strdup(value);
 			return (1);
 		}
 		tempHead = tempHead->next;
@@ -37,13 +37,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* if no corresponding key found : add a new elements at the begenning of the list*/
 	/* create an element */
 	newElem = malloc(sizeof(hash_node_t));
+	if (!newElem)
+		return (0);
 	newElem->key = strdup(key); /* copy the key string into the new elem node */
 	newElem->value = strdup(value); /* same but for the value string */
-	newElem->next = NULL;
-
-	/*add it at the begenning of the singly linked list*/
-	if (ht->array[index])
-		newElem->next = ht->array[index]; /* if index is already taken by a list, link newElem with said list */
+	newElem->next = ht->array[index];
 	ht->array[index] = newElem;
 
 	return (1);
