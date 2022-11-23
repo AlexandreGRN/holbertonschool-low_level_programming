@@ -29,6 +29,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			/* replacing the old value in the good spot (corresponding key) */
 			free(tempHead->value);
 			tempHead->value = strdup(value);
+			if (!(newElem->value))
+				return (0);
 			return (1);
 		}
 		tempHead = tempHead->next;
@@ -41,6 +43,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	newElem->key = strdup(key); /* copy the key string into the new elem node */
 	newElem->value = strdup(value); /* same but for the value string */
+	if (!(newElem->value))
+		return (0);
 	newElem->next = ht->array[index];
 	ht->array[index] = newElem;
 
