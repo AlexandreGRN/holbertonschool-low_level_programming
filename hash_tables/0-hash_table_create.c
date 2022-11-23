@@ -10,7 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *newHash;
 
-	/* create new hash table struc*/
+	/* create new hash_table struc*/
 	newHash = malloc(sizeof(hash_table_t));
 	if (!newHash)
 		return (NULL);
