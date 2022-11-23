@@ -14,6 +14,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *newElem; /* new element to create (if needed) */
 	hash_node_t *tempHead; /* used to search an available place in the hashtable and head of the linked list */
 
+	if (ht == NULL || key == NULL)
+		return (0);
 	/* get the index from prev function*/
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -47,6 +49,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	newElem->next = ht->array[index];
 	ht->array[index] = newElem;
-
 	return (1);
 }
