@@ -1,4 +1,4 @@
-#include "hash_table/h"
+#include "hash_table.h"
 
 /**
  * hash_djb2 - program that associate a string to a number
