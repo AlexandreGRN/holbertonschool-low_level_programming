@@ -7,25 +7,31 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int count, test_separator = 0;
+	unsigned long int count;
+	int test = 0; /* test for print separator */
 	hash_node_t *currentHead;
 
-	printf("{");
-	for (count = 0; ht != NULL && count < ht->size; count++)
+	if (ht)
 	{
-		test_separator = 0;
-		currentHead = ht->array[count];
-		while (currentHead)
+		printf("{");
+		for (count = 0; ht != NULL && count < ht->size; count++)
 		{
-			if (currentHead && currentHead->value)
+			/* print separator */
+			currentHead = ht->array[count];
+			if (count + 1 != ht->size && currentHead && currentHead->value && test == 1)
+				printf(", ");
+			test = 0;
+			/* print value*/
+			while (currentHead)
 			{
-				printf("'%s': '%s'", currentHead->key, currentHead->value);
-				currentHead = currentHead->next;
-				test_separator = 1;
+				if (currentHead && currentHead->value)
+				{
+					printf("'%s': '%s'", currentHead->key, currentHead->value);
+					currentHead = currentHead->next;
+					test = 1;
+				}
 			}
 		}
-		if (count + 1 != ht->size && test_separator == 1)
-			printf(", ");
+		printf("}\n");
 	}
-	printf("}\n");
 }
