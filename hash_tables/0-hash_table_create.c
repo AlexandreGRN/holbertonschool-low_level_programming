@@ -12,8 +12,15 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* create new hash table struc*/
 	newHash = malloc(sizeof(hash_table_t));
+	if (!newHash)
+		return (NULL);
 	newHash->size = size;
 	newHash->array = malloc(sizeof(hash_node_t));
+	if (!newHash)
+	{
+		free(newHash);
+		return (NULL);
+	}
 
 	return (newHash);
 }
