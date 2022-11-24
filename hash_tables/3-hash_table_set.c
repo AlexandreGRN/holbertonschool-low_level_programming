@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *newElem; /* new element to create (if needed) */
-	hash_node_t *tempHead; /* used to search an available place in the hashtable and head of the linked list */
+	hash_node_t *tempHead; /* used to search an available 
 
 	if (ht == NULL || key == NULL)
 		return (0);
@@ -25,10 +25,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* search if the index isn't already taken */
 	while (tempHead)
 	{
-		/*multiples key can have the same idx, we need to search the node stockin the good key in the said idx */
+		/*multiples key can have the same idx, 
 		if (strcmp(tempHead->key, key) == 0)
 		{
-			/* replacing the old value in the good spot (corresponding key) */
+			/* replacing the old value in the good spot 
 			free(tempHead->value);
 			tempHead->value = strdup(value);
 			if (!(tempHead->value))
@@ -38,12 +38,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tempHead = tempHead->next;
 	}
 
-	/* if no corresponding key found : add a new elements at the begenning of the list*/
+	/* if no corresponding key found : add a new elements at 
 	/* create an element */
 	newElem = malloc(sizeof(hash_node_t));
 	if (!newElem)
 		return (0);
-	newElem->key = strdup(key); /* copy the key string into the new elem node */
+	newElem->key = strdup(key); /* copy the key string into 
 	newElem->value = strdup(value); /* same but for the value string */
 	if (!(newElem->value))
 		return (0);
