@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_set - adds an element to the hash table
  * @ht: hash table
@@ -7,7 +6,6 @@
  * @value: value associated with the key
  * Return: 1 (success) or 0 (fail)
  */
-
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -21,7 +19,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* go to index in the hashtable*/
 	tempHead = ht->array[index];
-
 	/* search if the index isn't already taken */
 	while (tempHead)
 	{
@@ -37,7 +34,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		tempHead = tempHead->next;
 	}
-
 	/* if no corresponding key found : add a new elements at the begenning of the list*/
 	/* create an element */
 	newElem = malloc(sizeof(hash_node_t));
@@ -49,5 +45,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	newElem->next = ht->array[index];
 	ht->array[index] = newElem;
+
 	return (1);
 }
