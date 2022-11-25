@@ -39,3 +39,15 @@ _______________________________________________
 Function pointers | Directory for function pointers
 _______________________________________________
 Variadic functions | Directory for variadics
+_______________________________________________
+Singly linked lists | Directory for singly linked lists
+_______________________________________________
+More singly linked lists | Another directory for singly linked lists
+_______________________________________________
+Bit manipulation | Directory for bits manipulation using bitwise operator
+_______________________________________________
+File I/O | Directory for unistd.h function
+_______________________________________________
+Doubly linked lists | Directory for doubly linked lists
+_______________________________________________
+Hash tables | Directory for Hash tables projects
