@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-	unsigned int n;
+	unsigned long int n;
 
 	n = flip_bits(ULONG_MAX, 0);
-	printf("%u\n", n);
+	printf("%lu\n", n);
 	return (0);
 }

@@ -18,7 +18,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	if (m == 0)
 		tester = n;
 
-	while (tester >= 1)
+	while (tester != 0)
 	{
 		if ((tester & 1) == 0)/*if last bit of tester is 1, number to flip is ++*/
 			numberFlip++;
