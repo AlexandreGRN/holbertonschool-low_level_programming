@@ -15,3 +15,5 @@
 7-insert_dnodeint.c | Function that inserts a new node at a given position.
 
 8-delete_dnodeint.c | Function that deletes the node at index index of a dlistint_t linked list.
+
+Backward | Function that can print a doubly linked list backward (used for testing purpose).
