@@ -1,10 +1,11 @@
 #include "search_algos.h"
 
 /**
- * linear_search - 
+ * linear_search - Search a number in an array
  * @array: array
  * @size: size of the array
  * @value: value searched
+ * Return: -1 if error, where is the number if existing
  */
 
 int linear_search(int *array, size_t size, int value)
@@ -21,7 +22,7 @@ int linear_search(int *array, size_t size, int value)
 			return (-1);
 		printf("Value checked array[%d] = [%d]\n", count, array[count]);
 		if (array[count] == value)
-			return(count);
+			return (count);
 	}
 	return (-1);
 }
